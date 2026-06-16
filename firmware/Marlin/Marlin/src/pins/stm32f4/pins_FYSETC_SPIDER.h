@@ -45,15 +45,30 @@
 //
 // Steppers
 //
-#define X2_STEP_PIN                         PD12
-#define X2_DIR_PIN                          PC4
-#define X2_ENABLE_PIN                       PE8
-#define X2_CS_PIN                           PA15
+#define E1_STEP_PIN                         PE1  //CHANGED TO E1 SLOT
+#define E1_DIR_PIN                          PE0
+#define E1_ENABLE_PIN                       PC5
+#define E1_CS_PIN                           PD11
 
-#define Z2_STEP_PIN                         PE1
-#define Z2_DIR_PIN                          PE0
-#define Z2_ENABLE_PIN                       PC5
-#define Z2_CS_PIN                           PD11
+#define Z4_STEP_PIN                          E3_STEP_PIN  //PA15 
+#define Z4_DIR_PIN                           E3_DIR_PIN  
+#define Z4_ENABLE_PIN                        E3_ENABLE_PIN  
+#define Z4_CS_PIN                            E3_CS_PIN  
+
+#define Z3_STEP_PIN                         E2_STEP_PIN //PC15
+#define Z3_DIR_PIN                          E2_DIR_PIN
+#define Z3_ENABLE_PIN                       E2_ENABLE_PIN
+#define Z3_CS_PIN                           E2_CS_PIN
+
+#define Z2_STEP_PIN                         PE6 //PC14
+#define Z2_DIR_PIN                          PC13
+#define Z2_ENABLE_PIN                       PE5
+#define Z2_CS_PIN                           PC14
+
+#define Z_STEP_PIN                         PD14
+#define Z_DIR_PIN                          PD13
+#define Z_ENABLE_PIN                       PD15
+#define Z_CS_PIN                           PD10
 
 //
 // Heaters / Fans
@@ -78,26 +93,26 @@
   #define X_SERIAL_TX_PIN                   PE7
   #define X_SERIAL_RX_PIN        X_SERIAL_TX_PIN
 
-  #define X2_SERIAL_TX_PIN                  PA15
-  #define X2_SERIAL_RX_PIN      X2_SERIAL_TX_PIN
+  #define Z4_SERIAL_TX_PIN                  PA15 //OK
+  #define Z4_SERIAL_RX_PIN      Z4_SERIAL_TX_PIN
 
   #define Y_SERIAL_TX_PIN                   PE15
   #define Y_SERIAL_RX_PIN        Y_SERIAL_TX_PIN
 
-  #define Z_SERIAL_TX_PIN                   PD10
+  #define Z_SERIAL_TX_PIN                   PD10 //OK
   #define Z_SERIAL_RX_PIN        Z_SERIAL_TX_PIN
 
-  #define Z2_SERIAL_TX_PIN                  PD11
+  #define Z2_SERIAL_TX_PIN                  PC14 //OK
   #define Z2_SERIAL_RX_PIN      Z2_SERIAL_TX_PIN
 
   #define E0_SERIAL_TX_PIN                  PD7
   #define E0_SERIAL_RX_PIN      E0_SERIAL_TX_PIN
 
-  #define E1_SERIAL_TX_PIN                  PC14
+  #define E1_SERIAL_TX_PIN                  PD11
   #define E1_SERIAL_RX_PIN      E1_SERIAL_TX_PIN
 
-  #define E2_SERIAL_TX_PIN                  PC15
-  #define E2_SERIAL_RX_PIN      E2_SERIAL_TX_PIN
+  #define Z3_SERIAL_TX_PIN                  PC15 //OK
+  #define Z3_SERIAL_RX_PIN      Z3_SERIAL_TX_PIN
 #endif
 
 //

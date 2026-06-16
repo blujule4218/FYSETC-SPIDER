@@ -737,7 +737,7 @@
 
       #define SD_DETECT_PIN          EXP2_04_PIN
       #define KILL_PIN                        64
-
+     
     #elif ENABLED(ZONESTAR_LCD)
 
       #define ADC_KEYPAD_PIN                  12

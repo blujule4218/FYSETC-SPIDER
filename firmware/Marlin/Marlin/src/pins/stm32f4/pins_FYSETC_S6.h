@@ -67,8 +67,8 @@
 #define X_MAX_PIN                           PA1
 #define Y_MIN_PIN                           PB13
 #define Y_MAX_PIN                           PA2
-#define Z_MIN_PIN                           PA0
-#define Z_MAX_PIN                           PA3
+#define Z_MIN_PIN                           PA3
+#define Z_MAX_PIN                           PA0
 
 //
 // Filament Sensor
@@ -93,25 +93,35 @@
 #define Y_ENABLE_PIN                        PD9
 #define Y_CS_PIN                            PE15
 
-#define Z_STEP_PIN                          PD14
-#define Z_DIR_PIN                           PD13
-#define Z_ENABLE_PIN                        PD15
-#define Z_CS_PIN                            PD10
+#define Z_STEP_PIN                         PD14
+#define Z_DIR_PIN                          PD13
+#define Z_ENABLE_PIN                       PD15
+#define Z_CS_PIN                           PD10 //OIK
 
 #define E0_STEP_PIN                         PD5
 #define E0_DIR_PIN                          PD6
 #define E0_ENABLE_PIN                       PD4
 #define E0_CS_PIN                           PD7
 
-#define E1_STEP_PIN                         PE6
-#define E1_DIR_PIN                          PC13
-#define E1_ENABLE_PIN                       PE5
-#define E1_CS_PIN                           PC14
+#define E4_STEP_PIN                         PE1 // CHANGED TO E4 SLOT
+#define E4_DIR_PIN                          PE0
+#define E4_ENABLE_PIN                       PC5
+#define E4_CS_PIN                           PD11
 
 #define E2_STEP_PIN                         PE2
 #define E2_DIR_PIN                          PE4
 #define E2_ENABLE_PIN                       PE3
 #define E2_CS_PIN                           PC15
+
+#define E3_STEP_PIN                         PD12
+#define E3_DIR_PIN                          PC4
+#define E3_ENABLE_PIN                       PE8
+#define E3_CS_PIN                           PA15
+
+//#define E1_STEP_PIN                         PE6  //CHANGED TO E1 SLOT
+//#define E1_DIR_PIN                          PC13
+//#define E1_ENABLE_PIN                       PE5
+//#define E1_CS_PIN                           PC14
 
 #if HAS_TMC_UART
   //
@@ -119,41 +129,57 @@
   //
 
   #ifndef X_SERIAL_TX_PIN
-    #define X_SERIAL_TX_PIN                 PE9
+    #define X_SERIAL_TX_PIN                 PE7
   #endif
   #ifndef X_SERIAL_RX_PIN
-    #define X_SERIAL_RX_PIN                 PE8
+    #define X_SERIAL_RX_PIN                 PE7
   #endif
   #ifndef Y_SERIAL_TX_PIN
-    #define Y_SERIAL_TX_PIN                 PE14
+    #define Y_SERIAL_TX_PIN                 PE15
   #endif
   #ifndef Y_SERIAL_RX_PIN
-    #define Y_SERIAL_RX_PIN                 PE13
+    #define Y_SERIAL_RX_PIN                 PE15
   #endif
   #ifndef Z_SERIAL_TX_PIN
-    #define Z_SERIAL_TX_PIN                 PD11
+    #define Z_SERIAL_TX_PIN                 PD10
   #endif
   #ifndef Z_SERIAL_RX_PIN
-    #define Z_SERIAL_RX_PIN                 PD12
+    #define Z_SERIAL_RX_PIN                 PD10
   #endif
   #ifndef E0_SERIAL_TX_PIN
-    #define E0_SERIAL_TX_PIN                PD3
+    #define E0_SERIAL_TX_PIN                PD7
   #endif
   #ifndef E0_SERIAL_RX_PIN
-    #define E0_SERIAL_RX_PIN                PA15
+    #define E0_SERIAL_RX_PIN                PD7
   #endif
   #ifndef E1_SERIAL_TX_PIN
-    #define E1_SERIAL_TX_PIN                PC4
+    #define E1_SERIAL_TX_PIN                PD11
   #endif
   #ifndef E1_SERIAL_RX_PIN
-    #define E1_SERIAL_RX_PIN                PC5
+    #define E1_SERIAL_RX_PIN                PD11
   #endif
+
   #ifndef E2_SERIAL_TX_PIN
-    #define E2_SERIAL_TX_PIN                PE1
+    #define E2_SERIAL_TX_PIN                PC15
   #endif
   #ifndef E2_SERIAL_RX_PIN
-    #define E2_SERIAL_RX_PIN                PE0
+    #define E2_SERIAL_RX_PIN                PC15
   #endif
+
+  #ifndef E3_SERIAL_TX_PIN
+    #define E3_SERIAL_TX_PIN                PA15
+  #endif
+  #ifndef E3_SERIAL_RX_PIN
+    #define E3_SERIAL_RX_PIN                PA15
+  #endif
+ 
+  #ifndef E4_SERIAL_TX_PIN
+    #define E4_SERIAL_TX_PIN                PD11
+  #endif
+  #ifndef E4_SERIAL_RX_PIN
+    #define E4_SERIAL_RX_PIN                PD11
+  #endif
+  
 #endif
 
 //
@@ -164,6 +190,9 @@
 #define TEMP_2_PIN                          PC2
 #define TEMP_BED_PIN                        PC3
 
+#ifndef FILWIDTH_PIN
+  #define FILWIDTH_PIN                         PA2  // Analog Input on X+ endstop
+#endif
 //
 // Heaters / Fans
 //
@@ -180,8 +209,8 @@
   #define HEATER_BED_PIN                    PC8
 #endif
 
-#define FAN_PIN                             PB0
-#define FAN1_PIN                            PB1
+#define FAN_PIN                             PA13
+#define FAN1_PIN                            PA14
 #define FAN2_PIN                            PB2
 
 //

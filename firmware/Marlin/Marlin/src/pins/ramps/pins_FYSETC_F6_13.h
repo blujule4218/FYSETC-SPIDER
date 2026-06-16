@@ -240,7 +240,7 @@
     #define DOGLCD_CS                         17
 
     #if ENABLED(FYSETC_GENERIC_12864_1_1)
-      #define LCD_BACKLIGHT_PIN               27
+      #define LCD_BACKLIGHT_PIN               -1
     #endif
 
     #define LCD_RESET_PIN                     23  // Must be high or open for LCD to operate normally.
