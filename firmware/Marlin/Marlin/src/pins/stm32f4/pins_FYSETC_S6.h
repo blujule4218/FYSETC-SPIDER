@@ -63,12 +63,12 @@
 //
 // Limit Switches
 //
-#define X_MIN_PIN                           PB14
-#define X_MAX_PIN                           PA1
-#define Y_MIN_PIN                           PB13
-#define Y_MAX_PIN                           PA2
+#define X_MIN_PIN                           X_MAX_PIN
+#define X_MAX_PIN                           PB14 //X_MIN_PIN //PA1
+#define Y_MIN_PIN                           Y_MAX_PIN
+#define Y_MAX_PIN                           PB13 //Y_MIN_PIN //PA2
 #define Z_MIN_PIN                           PA3
-#define Z_MAX_PIN                           PA0
+#define Z_MAX_PIN                           PA2
 
 //
 // Filament Sensor
@@ -209,9 +209,9 @@
   #define HEATER_BED_PIN                    PC8
 #endif
 
-#define FAN_PIN                             PA13
-#define FAN1_PIN                            PA14
-#define FAN2_PIN                            PB2
+#define FAN_PIN                             HEATER_2_PIN // ORIGINAL FAN PIN PA13
+#define FAN1_PIN                            -1
+#define FAN2_PIN                            -1
 
 //
 // Misc. Functions

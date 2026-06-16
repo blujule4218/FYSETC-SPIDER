@@ -87,13 +87,13 @@
 // Servos
 // Z_MAX_PIN only works in input mode
 //
-#define SERVO0_PIN                          PA2
+#define SERVO0_PIN                          -1
 
 #if HAS_TMC_UART
   #define X_SERIAL_TX_PIN                   PE7
   #define X_SERIAL_RX_PIN        X_SERIAL_TX_PIN
 
-  #define Z4_SERIAL_TX_PIN                  PA15 //OK
+  #define Z4_SERIAL_TX_PIN                  5 //OK
   #define Z4_SERIAL_RX_PIN      Z4_SERIAL_TX_PIN
 
   #define Y_SERIAL_TX_PIN                   PE15
